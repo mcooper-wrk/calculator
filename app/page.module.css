@@ -1,0 +1,207 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  padding: 80px;
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  grid-row-start: 2;
+  position: absolute;
+  bottom: 25px;
+}
+
+.paper {
+  /* min-height: 10px; */
+  max-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  width: 75%;
+  height: auto;
+  border-radius: 5;
+  overflow-y: auto;
+}
+
+.calculator {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 22px;
+}
+
+.knobsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  width: 68%;
+}
+
+.sectionOne {
+  padding-right: 29px;
+}
+
+.sectionOneVariant {
+  padding-right: 9px;
+}
+
+.sectionTwo {
+  display: flex;
+  gap: 6px;
+  flex-direction: row;
+  padding-right: 29px;
+}
+
+.sectionTwoVariant {
+  display: flex;
+  gap: 6px;
+  flex-direction: row;
+}
+
+.sectionThree {
+  display: flex;
+}
+
+.sectionFour {
+  display: flex;
+  gap: 6px;
+}
+
+.button {
+  height: 40px;
+  width: 40px;
+}
+
+.buttonWhitish {
+  height: 40px;
+  width: 40px;
+  background-color: #cccccc;
+}
+
+.buttonWhitish:hover {
+  background-color: #ccccccb6;
+}
+
+.buttonTripleTall {
+  height: 132px;
+  width: 40px;
+  position: absolute;
+  flex-direction: column;
+}
+
+.variantOne {
+  height: 40px;
+  width: 60px;
+  background-color: #cccccc;
+}
+
+.variantOne:hover {
+  background-color: #ccccccb6;
+}
+
+.variantTwo {
+  height: 22px;
+  width: 40px;
+}
+
+.buttonRed {
+  height: 40px;
+  width: 40px;
+  background-color: #e07272;
+}
+
+.buttonRed:hover {
+  background-color: #e07272c0;
+}
+
+.topRowSectionLeft {
+  padding-left: 29px;
+  display: flex;
+}
+
+.topRowSectionRight {
+  padding-left: 14px;
+  display: flex;
+}
+
+.sliderMarksLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font: xxx-large digital-7-font;
+  color: #5cffff;
+  background: none;
+  border: none;
+  width: 300px;
+  padding-right: 10px;
+}
+
+.displayOutline {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 100px;
+  width: 400px;
+  background-color: #2f2f2f;
+  border-top-left-radius: 10;
+  border-top-right-radius: 10;
+  border-bottom-left-radius: 50;
+  border-bottom-right-radius: 50;
+}
+
+.displayInner {
+  display: flex;
+  height: 75px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.mainButtonSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.output {
+  height: auto;
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}

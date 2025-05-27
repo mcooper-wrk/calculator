@@ -16,7 +16,7 @@ export default function Home() {
   const calculatorRef = useRef<HTMLInputElement>(null); // Ref to the calculator div
   const outputRef = useRef<HTMLInputElement>(null);
   const bottomRef = useRef<HTMLInputElement>(null);
-  
+
   const formatNumberWithCommas = (number: string) => {
     const numStr = number.toString().replace(/,/g, "");
     const parts = numStr.split("."); // Split into integer and decimal parts
@@ -160,7 +160,7 @@ export default function Home() {
 
   useEffect(() => {
     const currentRef = calculatorRef.current;
-    const handleKeyDown = (event: { key: string; }) => {
+    const handleKeyDown = (event: { key: string }) => {
       const key = event.key;
 
       if (/[0-9]/.test(key)) {
@@ -215,8 +215,8 @@ export default function Home() {
       style={{ outline: "none" }}
     >
       <main className={styles.main}>
-        <div className={styles.paper} ref={outputRef}>
-          <div className={styles.output}>
+        <div className={styles.paper}>
+          <div className={styles.output} ref={outputRef}>
             <p>
               {output?.length > 0 &&
                 output.map((value, index) => (
@@ -227,7 +227,6 @@ export default function Home() {
                 ))}
             </p>
           </div>
-          <div ref={bottomRef} />
         </div>
         <div className={styles.calculator}>
           <Display displayValue={displayValue} />
@@ -245,6 +244,7 @@ export default function Home() {
             displayValue={displayValue}
           />
         </div>
+        <div ref={bottomRef} />
       </main>
     </div>
   );
